@@ -25,3 +25,11 @@
 #container a {
   text-decoration: none;
 }
+ion-footer {
+  ion-toolbar {
+    --background: #f8f8f8;
+    --color: #222;
+    border-top: 1px solid #ccc;
+  }
+}
+

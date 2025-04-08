@@ -1,20 +1,167 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-title>Home | Learn Ionic Angular</ion-title>
+      
+      <!-- Menu Icon -->
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+     
+   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <!-- card 1 - Position yr Component -->
+   <ion-card>
+    <ion-card-content>
+      <div class="ion-text-center">
+        <ion-card-title>Center Any Component</ion-card-title>
+        <!-- Line -->
+        <div style="width: 100%; border-top: 1px solid #d4d4d4; margin: 8px 0;"></div>
+        <ion-button color="primary" routerLink="/page-name">Go To Page</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <!-- card 0 - Grid Menu Component -->
+  <ion-card>
+    <ion-grid>
+        <ion-row class="ion-text-center">
+            <ion-col size="4" routerLink="/home">
+                <ion-icon name="home" color="danger" size="large"></ion-icon>
+                <p>Home</p>
+            </ion-col>
+            <ion-col size="4" routerLink="/about">
+                <ion-icon name="bag-add" color="secondary" size="large"></ion-icon>
+                <p>About</p>
+            </ion-col>
+            <ion-col size="4" routerLink="/contact">
+                <ion-icon name="chatbox" color="danger" size="large"></ion-icon>
+                <p>Contact</p>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <!-- card 1 - List Menu Component -->
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title>1.List Menu</ion-card-title>
+      <ion-list>
+        <ion-item routerLink="/about">
+            <ion-icon slot="start" name="man" color="danger"></ion-icon>
+            <ion-label>About Us</ion-label>
+        </ion-item>
+        <ion-item routerLink="/contact">
+            <ion-icon slot="start" name="book" color="danger"></ion-icon>
+            <ion-label>Contact Us</ion-label>
+        </ion-item>
+        <ion-item routerLink="/page3">
+            <ion-icon slot="start" name="heart" color="danger"></ion-icon>
+            <ion-label>Menu Three</ion-label>
+        </ion-item>
+    </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+   <!-- card 2 - LIST -->
+   <ion-card>
+    
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+            <ion-card-title>2.List</ion-card-title>
+        </ion-item>
+        <ion-item>
+            <ion-label>Item One</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>Item Two</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>Item Three</ion-label>
+        </ion-item>
+  
+      </ion-list>
+    </ion-card-content>
+      
+  </ion-card>
+
+  <!-- card 3 - video component -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>3.Embedding Video</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe id="js_video_iframe" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+    </ion-card-content>
+  </ion-card>
+
+    <!-- card 4 - External Links, Horizontal Rule -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>4.Using Links</ion-card-title>
+      </ion-card-header>
+      <div style="width: 100%; border-top: 1px solid #d4d4d4; margin: 8px 0;"></div>
+    
+      <ion-card-content>
+        <a href="https://google.com">Open Google</a>
+      </ion-card-content>
+    </ion-card>
+  
+  
+   <!-- card 5 card,text, button and image component -->
+  <ion-card style="box-shadow: none;">
+    <ion-card-header>
+      <ion-card-title>5.Image contents</ion-card-title>
+      <ion-card-subtitle>Always be creative</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-icon name="home"></ion-icon> <!-- this work finally -->
+      <p>
+        This is come text content. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab cumque nemo facere id aut ut perferendis alias dolorum tenetur quo!  
+      </p>
+      <ion-img src="/assets/images/creative.jpg"></ion-img><br>
+      <p>Example of Button</p>
+      <ion-button color="primary" (click)="goToAbout()">Go To About</ion-button>
+      <ion-button color="primary" routerLink="/contact">Go To Contact</ion-button>
+      
+    </ion-card-content>
+  </ion-card>
+
+  <!-- card 6 - Audio components -->
+  <ion-card style="box-shadow: none;" color="dark">
+    <ion-card-header>
+      <ion-card-title>6. Embedding Audio</ion-card-title>
+      <ion-card-subtitle>Mamamo Song</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+  
+      <p>This is Mamamo song..Starry Night.</p>
+      <audio src="/assets/audio/starryNight.mp3" controls></audio>
+      
+    </ion-card-content>
+  </ion-card>
+
+  <!-- card 7 - Footer -->
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleDarkMode()">
+        <p>Light/Dark - <ion-icon [name]="isDarkMode ? 'sunny' : 'moon'"></ion-icon></p>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
 </ion-content>
+
+
+
+
+
+
+
+
